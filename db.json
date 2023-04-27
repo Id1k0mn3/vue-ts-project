@@ -1,0 +1,74 @@
+{
+  "designes": [
+    {
+      "id": 1,
+      "code": 104,
+      "designPreview": "./src/assets-1.png",
+      "designLink": "#",
+      "designName": "Ostrov"
+    },
+    {
+      "id": 2,
+      "code": 105,
+      "designPreview": "./src/assets-2.png",
+      "designLink": "#",
+      "designName": "Flora",
+      "designes": [
+        {
+          "image": "",
+          "alt": "some alt"
+        },
+        {
+          "image": "",
+          "alt": "some alt"
+        },
+        {
+          "image": "",
+          "alt": "some alt"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": 108,
+      "designName": "SunWear",
+      "designPreview": "./src/assets-3.png",
+      "designLink": "#"
+    },
+    {
+      "id": 4,
+      "code": 110,
+      "designPreview": "./src/assets-1.png",
+      "designLink": "#",
+      "designName": "Ostrov"
+    },
+    {
+      "id": 5,
+      "code": 113,
+      "designPreview": "./src/assets-2.png",
+      "designLink": "#",
+      "designName": "Flora",
+      "designes": [
+        {
+          "image": "",
+          "alt": "some alt"
+        },
+        {
+          "image": "",
+          "alt": "some alt"
+        },
+        {
+          "image": "",
+          "alt": "some alt"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": 111,
+      "designPreview": "./src/assets-3.png",
+      "designLink": "#",
+      "designName": "SunWear"
+    }
+  ]
+}
