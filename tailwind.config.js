@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {},
+    colors: {
+      'lightgray': '#627B7A',
+      'bg-color': '#2C3D39',
+    },
   },
   plugins: [],
 }
