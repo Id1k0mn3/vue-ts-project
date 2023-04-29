@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <div v-for="item in designItems" :key="item.id">
-      {{ item.code }}
-    </div>
-  </div>
+  <ul class="designes-list">
+    <li class="designes-list__item" style="grid-column: 3 span;" v-for="designItem in designItems" :key="designItem.id">
+      {{ designItem.id }}
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import DesignDataService from "../services/DesignDataServices";
-  import { DesignItem } from '../intefaces';
+  import DesignDataService from "../../services/DesignDataServices";
+  import { DesignItem } from '../../intefaces';
 
   export default defineComponent({
     data() {

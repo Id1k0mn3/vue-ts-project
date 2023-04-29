@@ -1,0 +1,17 @@
+%text-base {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+%text-base-h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: calc(40 / 24);
+}
+
+%text-base-sm {
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.42rem;
+}

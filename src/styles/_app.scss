@@ -1,0 +1,13 @@
+.app {
+  height: 100vh;
+
+  &__layout {
+    display: flex;
+    height: 100%;
+  }
+
+  &__page-content {
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+  }
+}

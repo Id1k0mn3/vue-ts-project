@@ -1,0 +1,24 @@
+.home-page {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @extend %text-base-h1;
+
+    color: var(--ui-var-base-white);
+  }
+
+  &__add-new-design {
+    @include transition;
+
+    padding: .375rem 1.1875rem;
+    color: var(--ui-var-base-white);
+    background: var(--ui-var-blue);
+    border: 1px solid var(--ui-var-black-op-20);
+    border-radius: .25rem;
+    cursor: pointer;
+  }
+}

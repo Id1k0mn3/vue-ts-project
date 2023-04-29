@@ -1,0 +1,14 @@
+:root {
+  --ui-var-base-black: #000;
+  --ui-var-base-white: #FFF;
+  --ui-var-black-op-10: rgba(0, 0, 0, 10%);
+  --ui-var-black-op-20: rgba(0, 0, 0, 20%);
+  --ui-var-lightgray: #627B7A;
+  --ui-var-darkgreen: #2C3D39;
+  --ui-var-green: #7AB10E;
+  --ui-var-blue: #418AF2;  
+}
+
+$rocket-transition-timing-function: ease-in-out;
+$rocket-transition-duration: 250ms;
+$rocket-transition-delay: 0ms;

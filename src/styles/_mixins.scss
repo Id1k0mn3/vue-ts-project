@@ -1,0 +1,8 @@
+@mixin transition(
+    $prop: all,
+    $duration: $rocket-transition-duration,
+    $timing-function: $rocket-transition-timing-function,
+    $delay: $rocket-transition-delay
+) {
+    transition: $prop $duration $timing-function $delay;
+}

@@ -1,0 +1,15 @@
+// base
+@import './config';
+@import './typography';
+@import './app';
+@import './fonts';
+@import './mixins';
+@import './default';
+// components folder
+@import '../components/layout/shared/sidebar/sidebar';
+
+// pages folder
+@import '../pages/home-page/home-page';
+
+// widgets folder
+@import '../widgets/DesignesList/designes-list';
