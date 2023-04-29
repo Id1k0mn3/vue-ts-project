@@ -1,6 +1,6 @@
 <template>
   <ul class="designes-list">
-    <li class="designes-list__item" style="grid-column: 3 span;" v-for="designItem in designItems" :key="designItem.id">
+    <li class="designes-list__item" v-for="designItem in designItems" :key="designItem.id">
       {{ designItem.id }}
     </li>
   </ul>

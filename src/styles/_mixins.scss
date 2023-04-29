@@ -6,3 +6,13 @@
 ) {
     transition: $prop $duration $timing-function $delay;
 }
+
+
+@mixin media($point: 320px, $type: min) {
+    @if $type == min {
+        @media (min-width: $point)  { @content; }
+    } @else {
+        @media (max-width: $point)  { @content; }
+    }
+    
+}

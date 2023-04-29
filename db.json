@@ -3,14 +3,14 @@
     {
       "id": 1,
       "code": 104,
-      "designPreview": "./src/assets-1.png",
+      "designPreview": "https://cdn.dribbble.com/userupload/2970030/file/original-b405f07b44b99610820219e22202c3a4.png?resize=400x0",
       "designLink": "#",
       "designName": "Ostrov"
     },
     {
       "id": 2,
       "code": 105,
-      "designPreview": "./src/assets-2.png",
+      "designPreview": "https://cdn.dribbble.com/userupload/4060584/file/original-a2dcb88a24da79db509636a26cd98052.png?resize=400x0",
       "designLink": "#",
       "designName": "Flora",
       "designes": [
@@ -32,20 +32,20 @@
       "id": 3,
       "code": 108,
       "designName": "SunWear",
-      "designPreview": "./src/assets-3.png",
+      "designPreview": "https://assets.website-files.com/5f1efd2768fed6b653883c9d/5f1efd2768fed63bf9883e05_cover-poster-structure.jpg",
       "designLink": "#"
     },
     {
       "id": 4,
       "code": 110,
-      "designPreview": "./src/assets-1.png",
+      "designPreview": "https://cdn.dribbble.com/userupload/2970030/file/original-b405f07b44b99610820219e22202c3a4.png?resize=400x0",
       "designLink": "#",
       "designName": "Ostrov"
     },
     {
       "id": 5,
       "code": 113,
-      "designPreview": "./src/assets-2.png",
+      "designPreview": "https://cdn.dribbble.com/userupload/4060584/file/original-a2dcb88a24da79db509636a26cd98052.png?resize=400x0",
       "designLink": "#",
       "designName": "Flora",
       "designes": [
@@ -66,7 +66,7 @@
     {
       "id": 6,
       "code": 111,
-      "designPreview": "./src/assets-3.png",
+      "designPreview": "https://assets.website-files.com/5f1efd2768fed6b653883c9d/5f1efd2768fed63bf9883e05_cover-poster-structure.jpg",
       "designLink": "#",
       "designName": "SunWear"
     }
