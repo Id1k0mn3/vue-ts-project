@@ -1,7 +1,9 @@
 .home-page {
   display: flex;
   flex-direction: column;
+  padding: 1.5rem 2rem;
   row-gap: 1.25rem;
+  background: var(--ui-var-darkgreen);
 
   &__head {
     display: flex;

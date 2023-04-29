@@ -16,4 +16,5 @@ export interface DesignItem {
   designLink?: string;
   designName?: string;
   designes?: DesignImage[];
+  isPublished?: boolean
 }

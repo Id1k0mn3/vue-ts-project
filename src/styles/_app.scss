@@ -1,5 +1,6 @@
 .app {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 
   &__layout {
     display: flex;
@@ -8,6 +9,5 @@
 
   &__page-content {
     flex-grow: 1;
-    padding: 1.5rem 2rem;
   }
 }

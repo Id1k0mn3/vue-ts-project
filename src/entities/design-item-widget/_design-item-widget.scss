@@ -1,0 +1,44 @@
+.design-item-widget {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 1rem;
+
+  &__short-information {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    background-color: var(--ui-var-base-white);
+    padding: 2px 5px;
+    border-radius: .5rem;
+  }
+
+  &__label-text {
+    color: var(--ui-var-base-black);
+    font-size: .75rem;
+    text-decoration: none;
+  }
+  
+  &__name {
+    @extend %text-base;
+
+    color: var(--ui-var-base-white);
+    text-decoration: none;
+  }
+
+  &__wrapper-image {
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: .5rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
