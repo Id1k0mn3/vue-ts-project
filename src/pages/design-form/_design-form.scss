@@ -1,0 +1,13 @@
+.design-form {
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+
+  @include media(992px) {
+    padding: 1.5rem 2rem 1.5rem 7.5rem;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

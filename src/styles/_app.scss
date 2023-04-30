@@ -1,10 +1,11 @@
 .app {
   min-height: 100vh;
   height: 100%;
+  display: flex;
 
   &__layout {
+    width: 100%;
     display: flex;
-    height: 100%;
   }
 
   &__page-content {

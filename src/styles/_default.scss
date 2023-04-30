@@ -4,7 +4,8 @@
 }
 
 body {
-  background: var(--ui-var-darkgreen);
+  min-height: 100vh;
+  height: 100%;
   font-family: 'Roboto';
 }
 

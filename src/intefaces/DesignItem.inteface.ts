@@ -1,8 +1,10 @@
 type IdType = {
-  id?: string | number;
+  id: string | number;
 }
 
-type CodeType = IdType;
+type CodeType = {
+  code: string | number;
+}
 
 interface DesignImage {
   image: string;
@@ -10,11 +12,11 @@ interface DesignImage {
 }
 
 export interface DesignItem {
-  id?: IdType;
-  code?: CodeType;
-  designPreview?: string;
-  designLink?: string;
-  designName?: string;
-  designes?: DesignImage[];
-  isPublished?: boolean
+  id: IdType['id'];
+  code: CodeType['code'];
+  designPreview: string;
+  designLink: string;
+  designName: string;
+  designes?: Array<DesignImage>;
+  isPublished: boolean
 }

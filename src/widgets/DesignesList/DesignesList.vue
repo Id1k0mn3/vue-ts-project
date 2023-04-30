@@ -4,9 +4,10 @@
       class="designes-list__item"
       v-for="designItem in designItems"
       :key="designItem.id"
-      v-if="designItem.isPublished"
       >
-      <DesignItemWidget :designItem="designItem"/>
+      <router-link :to="{name: 'add-change', params: {...designItem}}">
+        <DesignItemWidget :designItem="designItem" v-if="designItem.isPublished"/>
+      </router-link>
     </li>
   </ul>
 </template>
