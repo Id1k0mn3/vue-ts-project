@@ -6,7 +6,7 @@ type CodeType = {
   code: string | number;
 }
 
-interface DesignImage {
+export interface DesignImage {
   image: string;
   alt: string; 
 }
@@ -17,6 +17,6 @@ export interface DesignItem {
   designPreview: string;
   designLink: string;
   designName: string;
-  designes?: Array<DesignImage>;
+  designes: Array<DesignImage>;
   isPublished: boolean
 }

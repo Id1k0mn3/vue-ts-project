@@ -1,3 +1,3 @@
 import { type DesignItem } from './DesignItem.inteface';
-
-export { DesignItem }
+import { type DesignImage } from './DesignItem.inteface';
+export { DesignItem, DesignImage }

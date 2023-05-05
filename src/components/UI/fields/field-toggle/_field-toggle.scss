@@ -1,0 +1,63 @@
+.field-toggle {
+  $this: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: .625rem;
+
+  &__hidden-input {
+    width: 4rem;
+    height: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+
+    &:checked + {
+      #{$this}__button {
+        background-color: var(--ui-var-green);
+
+        &:after {
+          left: 42px;
+        }
+      }
+
+      #{$this}__label {
+        color: var(--ui-var-green);
+      }
+    }
+  }
+
+  &__button {
+    @include transition;
+
+    display: block;
+    position: relative;
+    width: 4rem;
+    height: 1.5rem;
+    background: var(--ui-var-black-op-10);
+    border-radius: .875rem;
+    pointer-events: none;
+
+    &:after {
+      @include transition;
+
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      transform: translateY(-50%);
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: var(--ui-var-base-white);
+      border-radius: 50%;
+      content: '';
+      box-shadow: 0px 2px 4px 0px #00000026;
+    }
+  }
+
+  &__label {
+    @extend %text-base-sm;
+    @include transition;
+  }
+}

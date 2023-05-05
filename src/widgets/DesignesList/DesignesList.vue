@@ -5,7 +5,7 @@
       v-for="designItem in designItems"
       :key="designItem.id"
       >
-      <router-link :to="{name: 'add-change', params: {...designItem}}">
+      <router-link :to="{path: `/design/${designItem.id}`, params: { id: designItem.id, data: designItems } }">
         <DesignItemWidget :designItem="designItem" v-if="designItem.isPublished"/>
       </router-link>
     </li>
