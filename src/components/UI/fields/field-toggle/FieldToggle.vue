@@ -4,6 +4,7 @@
       class="field-toggle__hidden-input"
       type="checkbox"
       :modelValue="isPublished"
+      :checked="model"
       id="isPublishedField"
       @change="updateValue"
 

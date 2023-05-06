@@ -9,9 +9,13 @@ const routes:  Array<RouteRecordRaw> = [
   },
   {
     path: '/design/:id',
-    name: 'add-change',
+    name: 'design-form',
     component: () => import('../pages/design-form/DesignForm.vue'),
-    props: (route) => ({ designItemData: route.params.data })
+    props: (route) => {      
+      return {
+        designItemData: JSON.parse(route.query.designItemData as string),
+      }
+    },
   },
 ]
 

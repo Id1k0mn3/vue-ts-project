@@ -3,9 +3,9 @@
     <div class="home-page__head">
       <h1 class="home-page__title">Всі дизайни</h1>
       <div class="home-page__action">
-        <router-link :to="{name: 'add-change', params: { id: 'false' }}">
+        <router-link :to="{name: 'design-form', params: { id: 0 }, query: {designItemData: JSON.stringify({})}}">
           <button 
-          class="home-page__add-new-design">
+          class="button button--default">
           Додати дизайн!</button>
         </router-link>
       </div>

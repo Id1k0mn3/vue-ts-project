@@ -6,7 +6,12 @@ type CodeType = {
   code: string | number;
 }
 
+type IdDesignImage = {
+  id: string | number;
+}
+
 export interface DesignImage {
+  id: IdDesignImage['id'];
   image: string;
   alt: string; 
 }

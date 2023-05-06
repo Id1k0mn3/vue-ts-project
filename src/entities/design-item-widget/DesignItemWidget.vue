@@ -22,9 +22,5 @@
     props: {
       designItem: Object as PropType<DesignItem>
     },
-
-    mounted() {
-      console.log(this.designItem)
-    }
   })
 </script>

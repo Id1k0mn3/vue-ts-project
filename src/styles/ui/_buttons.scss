@@ -1,0 +1,31 @@
+.button {
+  @include transition;
+
+  padding: .375rem 1.1875rem;
+  border: 1px solid var(--ui-var-black-op-20);
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: none;
+
+  &--default {
+    color: var(--ui-var-base-white);
+    background: var(--ui-var-blue);
+
+    &:hover,
+    &:focus {
+      background: var(--ui-var-base-white);
+      color: var(--ui-var-blue);
+    }
+  }
+
+  &--outline {
+    color: var(--ui-var-red);
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background: var(--ui-var-red);
+      color: var(--ui-var-base-white);
+    }
+  }
+}

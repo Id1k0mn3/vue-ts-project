@@ -5,7 +5,7 @@
       v-for="designItem in designItems"
       :key="designItem.id"
       >
-      <router-link :to="{path: `/design/${designItem.id}`, params: { id: designItem.id, data: designItems } }">
+      <router-link :to="{ name: 'design-form', params: { id: designItem.id }, query: { designItemData: JSON.stringify(designItem) } }">
         <DesignItemWidget :designItem="designItem" v-if="designItem.isPublished"/>
       </router-link>
     </li>
@@ -32,7 +32,6 @@
     mounted() {
       DesignDataService.getAll()
         .then(({ data }: any) => {
-          console.log(data);
           this.designItems = data;
         })
         .catch((e: Error) => {
