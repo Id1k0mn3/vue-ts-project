@@ -1,0 +1,78 @@
+.field-file-upload {
+  $this: &;
+
+  &--is-empty {
+    width: 100%;
+  }
+
+  &__file-upload-zone-wrapper {
+    width: 100%;
+
+    &:hover {
+      #{$this}__file-upload-zone {
+        border-color: var(--ui-var-blue);
+
+        &::before,
+        &::after {
+          background: var(--ui-var-blue);
+        }
+      }
+    }
+  }
+
+  &__file-upload-zone {
+    @include transition;
+
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 2px dashed var(--ui-var-black-op-10);
+
+    &::before,
+    &::after {
+      @include transition;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      background: var(--ui-var-gray);
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+
+    &::before {
+      width: 2px;
+      height: 30px;
+    }
+
+    &::after {
+      width: 30px;
+      height: 2px;
+    }
+
+    &--is-empty {
+      width: 100%;
+      max-width: revert;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__file-uopload-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: revert;
+    height: revert;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+  }
+
+  .file-uploads {
+    width: 100%;
+  }
+}

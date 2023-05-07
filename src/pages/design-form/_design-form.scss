@@ -1,5 +1,10 @@
 .design-form {
+  $this: &;
+
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem 2rem 1.5rem 1.5rem;
+  row-gap: 2.25rem;
 
   @include media(992px) {
     padding: 1.5rem 2rem 1.5rem 7.5rem;
@@ -9,10 +14,103 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   &__actions {
     display: flex;
     column-gap: .5rem;
+  }
+
+  &__images-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+  }
+
+  &__images-list-item {
+    @include transition;
+
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: grab;
+
+    &:hover {
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      #{$this}__button-remove-design {
+        opacity: 1;
+      }
+
+      #{$this}__image {
+        opacity: .3;
+      }
+    }
+
+    @include media(564px) {
+      max-width: 120px;
+    }
+  }
+
+  &__image {
+    @include transition;
+  }
+
+  &__images-list-item--fluid {
+    max-width: revert;
+  }
+
+  &__button-remove-design {
+    @include transition;
+
+    opacity: 0;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    z-index: 1;
+    display: flex;
+    padding: .25rem;
+    background-color: var(--ui-var-black-op-50);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--ui-var-black-op-20);
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+
+  &__fields-group {
+    width: 100%;
+    display: flex;
+    column-gap: .5rem;
+  }
+
+  &__field-control {
+    flex-grow: 1;
+    padding: .375rem .75rem;
+    border: 1px solid var(--ui-var-black-op-20);
+    border-radius: 3px;
+  }
+
+  &__field-control--number {
+    width: 5rem;
+    flex-grow: 0;
   }
 }
