@@ -14,12 +14,26 @@ const designesModule: Module<DesignesState, RootState> = {
   },
 
   mutations: {
+    updateDesign(state, design: DesignItem) {
+      const designIndex = state.designes.findIndex(({id}) => id === design.id);
+
+      if (designIndex === -1) {
+        return;
+      }
+
+      state.designes[designIndex] = design;
+    },
+
     setDesignes(state, designes: DesignItem[]) {
       state.designes = designes;
     }
   },
 
   actions: {
+    updateDesign({commit}, design: DesignItem) {
+      commit('setDesignes', design);
+    },
+
     getDesignes({ commit }) {
       DesignDataService.getAll()
         .then(({ data }: any) => {

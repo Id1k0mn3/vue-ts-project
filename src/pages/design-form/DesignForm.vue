@@ -64,7 +64,7 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
   import { DesignItem } from '../../intefaces';
-  // import { DesignImage } from '../../intefaces';
+  import { useStore } from 'vuex';
   import FormControl from '../../components/UI/fields/form-control/FormControl.vue';
   import FormToggle from '../../components/UI/fields/form-toggle/FormToggle.vue';
   import FormFileUpload from '../../components/UI/fields/form-file-upload/FormFileUpload.vue';
@@ -111,7 +111,8 @@
 
     methods: {
       submitForm() {
-        DesignDataService.change(this.designItemFields.id, this.designItemFields);
+        const store = useStore();
+        store.dispatch('designes/updateDesign', this.designItemFields);
       },
 
       setIsPublishedValue($data: boolean) {
@@ -137,7 +138,7 @@
       setFieldValue({name, value}) {
         console.log(name, value);
         this.designItemFields[name] = value;
-      },
+      }, 
     }
   })
 </script>
