@@ -14,8 +14,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import DesignDataService from "../../services/DesignDataServices";
-  import { DesignItem } from '../../intefaces';
+  import { useStore } from 'vuex';
   import DesignItemWidget from "../../entities/design-item-widget/DesignItemWidget.vue"
 
   export default defineComponent({
@@ -23,20 +22,16 @@
       DesignItemWidget,
     },
 
-    data() {
-      return {
-        designItems: [] as DesignItem[],
-      }
+    computed: {
+      designItems() {
+        const store = useStore();
+        return store.state.designes.designes;
+      },
     },
 
-    mounted() {
-      DesignDataService.getAll()
-        .then(({ data }: any) => {
-          this.designItems = data;
-        })
-        .catch((e: Error) => {
-          console.log(e);
-        });
-    }
+    created() {
+      const store = useStore();
+      store.dispatch('designes/getDesignes')
+    },
   })
 </script>
