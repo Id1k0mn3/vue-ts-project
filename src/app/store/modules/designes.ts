@@ -18,6 +18,8 @@ const designesModule: Module<DesignesState, RootState> = {
       const designIndex = state.designes.findIndex(({id}) => id === design.id);
 
       if (designIndex === -1) {
+        state.designes.push(design);
+
         return;
       }
 
@@ -26,12 +28,16 @@ const designesModule: Module<DesignesState, RootState> = {
 
     setDesignes(state, designes: DesignItem[]) {
       state.designes = designes;
+    },
+
+    removeDesign(state, designId: Number) {
+      state.designes = state.designes.filter(({id}) => id !== designId);
     }
   },
 
   actions: {
     updateDesign({commit}, design: DesignItem) {
-      commit('setDesignes', design);
+      commit('updateDesign', design);
     },
 
     getDesignes({ commit }) {
@@ -42,7 +48,17 @@ const designesModule: Module<DesignesState, RootState> = {
         .catch((e: Error) => {
           console.log(e);
         });
+    },
+
+    removeDesign({commit}, designId: Boolean) {
+      commit('removeDesign', designId);
     }
+  },
+
+  getters: {
+    returnDesignes(state) {
+      return state.designes;
+    },
   },
 }
 

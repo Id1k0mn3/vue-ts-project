@@ -28,4 +28,9 @@
       color: var(--ui-var-base-white);
     }
   }
+
+  &--disabled {
+    opacity: .3;
+    pointer-events: none;
+  }
 }

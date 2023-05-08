@@ -31,7 +31,12 @@
 
     created() {
       const store = useStore();
-      store.dispatch('designes/getDesignes')
+
+      if (store.state.designes.designes.length || localStorage.getItem('itemsWereDeleted')) {
+        return;
+      }
+
+      store.dispatch('designes/getDesignes');
     },
   })
 </script>

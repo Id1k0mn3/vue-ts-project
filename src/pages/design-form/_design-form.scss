@@ -24,8 +24,8 @@
   }
 
   &__images-list {
+    max-width: 600px;
     display: flex;
-    flex-wrap: wrap;
     gap: .5rem;
 
     & > div {
@@ -93,6 +93,7 @@
   &__fields {
     display: flex;
     flex-wrap: wrap;
+    max-width: 600px;
     row-gap: 1.5rem;
   }
 

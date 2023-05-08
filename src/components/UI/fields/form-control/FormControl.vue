@@ -11,9 +11,13 @@
         :required="required ? required : false"
         :minLength="minLength ? minLength : false"
         :maxLength="maxLength ? maxLength : false"
-        :class="className ? className : ''"
-        @change="$emit('updateValue', {name: fieldName, value: fieldModel})"
+        :class="{ 'form-control__field--error': !fieldModel && isChanged }"
+        @change="onChange"
+        @input="onInput"
       >
+    </div>
+    <div class="form-control__error-wrapper" v-if="!fieldModel && isChanged">
+      <span class="form-control__error">Field is required</span>
     </div>
   </div>
 </template>
@@ -36,7 +40,6 @@
         required: true,
       },
       controlClassName: String,
-      className: String,
       minLength: Number,
       maxLength: Number,
       fieldName: String,
@@ -45,11 +48,22 @@
     data() {
       return {
         fieldModel: this.model,
+        isChanged: false,
       }
     },
 
-    created() {
-      console.log(this.fieldModel);
+    methods: {
+      onChange() {
+        if (!this.fieldModel) {
+          return;
+        }
+
+        this.$emit('updateValue', {name: this.fieldName, value: this.fieldModel});
+      },
+
+      onInput() {
+        this.isChanged = true;
+      },
     },
   })
 </script>
