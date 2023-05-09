@@ -158,10 +158,11 @@
 
       removeDesign() {
         this.$store.dispatch('designes/removeDesign', this.designItemFields.id);
-        console.log(this.$store.state.designes.designes.length);
+
         if (!this.$store.state.designes.designes.length) {
           localStorage.setItem('itemsWereDeleted', 'true');
         }
+
         this.$router.push('/');
       },
     }
